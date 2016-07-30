@@ -1,0 +1,18 @@
+[
+	{
+	"NameSmartphone" : "Xperia",
+	"Colores" : "Blanco"
+	},
+	{
+	"NameSmartphone" : "iPhone",
+	"Colores" : "Rojo"
+	},
+	{
+	"NameSmartphone" : "Samsung",
+	"Colores" : "Verde"
+	},
+	{
+	"NameSmartphone" : "HTC",
+	"Colores" : "Cafe"
+	}
+]

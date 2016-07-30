@@ -1,0 +1,113 @@
+@import url(https://fonts.googleapis.com/css?family=Fjalla+One);
+ 
+body{
+    color: #333;
+    font-family: 'Fjalla One', Arial, "Monaco", sans-serif;
+    font-size: 16px;
+}
+ 
+#container{
+    margin: 0 auto;
+    /*max-width: 960px;*/
+}
+ 
+#container header{
+    background: #DDD;
+    border-bottom: 1px solid; 
+}
+ 
+#container header h1{
+    font-size: 4em;
+    margin: 1em;
+}
+ 
+#container header p{
+    font-size: 2em;
+    margin: 1em;
+}
+ 
+#container #content{
+    background: #CCC;
+    padding: 10px; 
+}
+ 
+#container #content article{
+    background: #FFF;
+    border-bottom: 2px solid #CCC;
+}
+ 
+#container footer{
+    background: #CCC;
+}
+#Paragraph1-image{
+	display:block;	
+}
+#Paragraph1{
+	display:none;
+}
+#Paragraph2{
+	background-color:#1DB100;	
+}
+#Paragraph3{
+	background-color:#0055C9;
+}
+#Paragraph31, #Paragraph13{
+	display:none;
+}
+@media screen and (max-width: 1200px){
+ 	#Paragraph1-image{
+		display:none;	
+	}
+	#Paragraph1{
+		display:block;
+	}	
+}
+
+@media screen and (min-width: 768px) and (max-width: 992px){
+    
+	#content{
+		position:relative;
+	}	
+	/*#Paragraph1{
+		background-color:#003CFF;
+		position:absolute;
+		top:772%;
+	}
+	#Paragraph2{
+		background-color:#FF0004;
+		position:absolute;
+		top:387%;	
+	}
+	#Paragraph3{
+		background-color:#00B903;
+		position:absolute;
+		top:0;	
+	}*/
+	#Paragraph1, #Paragraph13{
+		background-color:#003CFF;		
+	}
+	#Paragraph2{
+		background-color:#FF0004;
+	}
+	#Paragraph3, #Paragraph31{
+		background-color:#00B903;
+	}
+	#Paragraph31, #Paragraph13{
+		display:block;
+	}
+	#Paragraph3, #Paragraph1{
+		display:none;
+	}
+}
+
+@media screen and (max-width: 767px){
+	#Paragraph1{
+		background-color:#9F9F9F;
+	}
+	#Paragraph2{
+		background-color:#cd853f;		
+	}
+	#Paragraph3{
+		background-color:#F4B2B3;
+	}
+}

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html ng-app="angular_ajax">
+<head>
+	<title>Lab16</title>
+	<meta charset="utf-8" />
+	<link rel="stylesheet" type="text/css" href="styles.css" />
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script>
+</head>
+<body>
+	<h1>Colegios</h1>
+
+	<div ng-controller="schoolController">
+		<table>
+		   <tr>
+		      <th>Nombre Colegio</th>
+		      <th>Direccion</th>
+		   </tr>
+		   <tr ng-repeat="school in Schools">
+		      <td>{{ school.Name }}</td>
+		      <td>{{ school.Address }}</td>
+		   </tr>
+		</table>
+	</div>
+    
+    <h1>Estudiantes</h1>
+
+	<div ng-controller="studentController">
+		<table>
+		   <tr>
+		      <th>Nombre Estudiante</th>
+		      <th>Apellido Estudiante</th>
+		   </tr>
+		   <tr ng-repeat="student in Students">
+		      <td>{{ student.FirstName }}</td>
+		      <td>{{ student.LastName }}</td>
+		   </tr>
+		</table>
+	</div>
+    <script>
+       angular.module('angular_ajax', [])
+              .controller('schoolController', function($scope, $http){
+              	var url = "school.json";
+				//var url = "http://localhost/AndresDiplomadoAMP4/Ejercicios/Modulo3/Lab20/prueba.php";
+              	$http.get(url).success(function(response){
+
+              		console.log(response);
+              		
+              		$scope.Schools = response;
+              	});
+              })
+			  .controller('studentController', function($scope, $http){
+              	var url = "student.json";
+				//var url = "http://localhost/AndresDiplomadoAMP4/Ejercicios/Modulo3/Lab20/prueba.php";
+              	$http.get(url).success(function(response){
+
+              		console.log(response);
+              		
+              		$scope.Students = response;
+              	});
+              });
+    </script>
+</body>
+</html>

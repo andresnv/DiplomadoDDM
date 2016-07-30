@@ -1,0 +1,22 @@
+ div{
+    width: 900px;
+    margin: 10px auto;
+    text-align: center;
+	padding:10px;
+}
+.container{
+    border: solid 1px;
+}
+.angularjs{
+    background:red;
+    font-size: 40px;
+    padding: 0 40px;
+    color: #fff;
+}
+
+.ClassColor1{
+	color:#0080C8;
+}
+.ClassColor2{
+	color:#00BD74;	
+}

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">		
+        
+        <script type="text/javascript" src="js/angular.min.js"></script>
+        <script type="text/javascript" src="js/lab1a.js"></script>
+        
+        <style>
+		.SoloMayuscula{
+			text-transform:uppercase;
+		}
+		</style>
+        
+        
+	</head>
+	<body ng-app="lab1a">  
+		<!--<form name="lab1aController" ng-controller="lab1aController">
+            <table border="0">
+            <tr><td>Nombre:</td><td><input name="name" type="text" ng-model="name" class="SoloMayuscula">
+               <span style="color:#ff2a25" ng-show="studentForm.name.$dirty && studentForm.name.$invalid">
+                  <span ng-show="studentForm.name.$error.required">First Name is required.</span>
+               </span>
+               {{ ImpNombreCompleto }}
+            </td></tr>
+            <tr><td>Cedula: </td><td><input name="id"  type="number" ng-model="id">
+               <span style="color:#ff2a25" ng-show="studentForm.id.$dirty && studentForm.id.$invalid">
+                  <span ng-show="studentForm.id.$error.required">Cedula es requerido.</span>
+               </span>
+            </td></tr>
+            <tr><td>Profesi&oacute;n: </td><td><input name="profession" type="text" ng-model="profession" length="100" >
+            <span style="color:#ff2a25" ng-show="studentForm.profession.$dirty && studentForm.profession.$invalid">
+                  <span ng-show="studentForm.profession.$error.required">Preofesion is required.</span>
+               </span>
+            </td></tr>
+            <tr><td>Salario: </td><td><input name="salary" type="number" ng-model="salary" length="2" required>
+            <span style="color:#ff2a25" ng-show="studentForm.salary.$dirty && studentForm.salary.$invalid">
+                  <span ng-show="studentForm.salary.$error.required">Age is required.</span>
+                  <span ng-show="studentForm.salary.$error.number">Invalid number.</span>
+               </span>
+            </td></tr>
+                    
+            
+            <tr><td>Telefono: </td><td><input name="phone"  type="text" ng-model="phone" >
+               <span style="color:#ff2a25" ng-show="studentForm.phone.$dirty && studentForm.phone.$invalid">
+                  <span ng-show="studentForm.phone.$error.required">phone is required.</span>
+               </span>
+            </td></tr>
+            
+            <tr><td>Direcci&oacute;n: </td><td><input name="address"  type="text" ng-model="address" >
+               <span style="color:#ff2a25" ng-show="studentForm.address.$dirty && studentForm.address.$invalid">
+                  <span ng-show="studentForm.address.$error.required">address is required.</span>
+               </span>
+            </td></tr>            
+            <tr><td><button ng-click="reset()">Reset</button></td>
+                <td><button ng-click="submit()">Submit</button></td></tr>
+            </table>
+        </form>-->
+        
+        
+        <body ng-controller="lab1aController">
+          <b>Nombre Completo</b>: {{ Data.name | uppercase }} <br>
+          <b>Cedula</b>: {{ Data.id }} <br>
+          <b>Profesion</b>: {{ Data.profession }} <br>
+          <b>Salario</b>: {{ Data.salary }} <br>
+          <b>Telefono</b>: {{ Data.phone  }} <br>
+          <b>Direccion</b>: {{ Data.address }} <br><br>
+          
+          
+          <b>Cambiar Nombre</b>: <input name="name" type="text" ng-model="Data.name">
+          
+          
+        </body>        
+        
+	</body>
+</html>

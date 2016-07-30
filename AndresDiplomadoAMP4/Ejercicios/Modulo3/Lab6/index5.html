@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html ng-app="app">
+<head>
+	<title>AngularJS First Application</title>
+	<meta charset="utf-8" />
+	<script type="text/javascript" src="angular.min.js"></script>
+    
+</head>
+<body>
+	<div ng-controller="ControllerOne">
+		<h1>Objetos</h1>
+		<ul>
+			<li ng-repeat="object in objects">El pa&iacute;s: {{ object.Pais }} Est&aacute; en: {{ object.Continente }}</li>
+		</ul>
+	</div>
+    <div ng-controller="ControllerTwo">
+		<h1>Impares</h1>
+		<ul>
+			<li ng-repeat="number in ImpImpares">{{ number }}</li>
+		</ul>
+	</div>
+	
+	<script type="text/javascript">
+	angular.module("app", [])
+		.controller('ControllerOne', function($scope){
+			$scope.objects = [
+				{
+					Pais: "Colombia",
+					Continente: "Suramerica"
+				},
+				{
+					Pais: "España",
+					Continente: "Europa"	
+				},
+				{
+					Pais: "Mexico",
+					Continente: "Centroamerica"	
+				},
+				{
+					Pais: "USA",
+					Continente: "Norteamerica"	
+				}
+			];
+		})
+		.controller('ControllerTwo', function($scope){
+			$scope.ImpImpares = [];
+			for(i=0;i<20;i++){
+				if(i%2!==0){
+					$scope.ImpImpares.push(i);
+				}
+			}
+		});
+	</script>
+</body>
+</html>

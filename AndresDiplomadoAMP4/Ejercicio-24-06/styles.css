@@ -1,0 +1,60 @@
+body{
+	margin:0;
+	font-family:"Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", "DejaVu Sans", Verdana, sans-serif;
+	font-size:14px;
+}
+.Header, .Footer, .Cuerpo{
+	width:100%;
+}
+.Header, .Footer{
+	text-align:center;
+	background:#F1F800;
+	height:100px;	
+}
+.Header{
+	padding-top:20px;
+}
+.SideMenu{
+	width:29%;
+	float:left;
+	border:1px #000000 solid;
+}
+.Formulario{
+	width:70%;
+	float:right;
+	border:1px #000000 solid;
+}
+.Footer{
+	background:#00E027;
+	clear:both;
+	padding-top:40px;
+}
+.Cuerpo{
+	background:#00D3FF;
+	clear: both;
+	overflow: hidden;
+	height: 1%;
+}
+a{
+	color:#005209;
+}
+@media only screen and (min-width: 300px) and (max-width: 600px) {
+	.SideMenu, .Formulario{
+		float:none;
+		width:100%;
+	}
+	.SideMenu{
+		padding:15px 0;
+	}
+	.SideMenu ul
+	{
+	   padding: 0px;
+	   margin: 0px;
+	}
+	.SideMenu li
+	{
+	   list-style-type: none;
+	   display: inline;
+	   padding-right: 5px;
+	}
+}

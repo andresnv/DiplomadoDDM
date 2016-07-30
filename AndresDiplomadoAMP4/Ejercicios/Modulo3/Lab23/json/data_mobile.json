@@ -1,0 +1,18 @@
+[
+	{
+	"Name" : "Colegio Uno",
+	"Address" : 101
+	},
+	{
+	"Name" : "Colegio Dos",
+	"Address" : 102
+	},
+	{
+	"Name" : "Colegio Tres",
+	"Address" : 103
+	},
+	{
+	"Name" : "Colegio Cuatro",
+	"Address" : 104
+	}
+]

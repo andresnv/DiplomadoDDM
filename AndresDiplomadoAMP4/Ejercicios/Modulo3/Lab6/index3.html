@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>AngularJS First Application</title>
+	<meta charset="utf-8" />
+</head>
+<body ng-app="app">
+	<div ng-controller="appController">
+    <h2>Solo suma</h2>
+    	<p>a: <input  type="number" ng-model="a" /></p>
+        <p>b: <input  type="number" ng-model="b" /></p>    		
+        <p>a+b: <input  type="text" value= {{a+b}} /></p>
+        <span>a+b: {{ a+b }}</span>
+	</div>
+    <hr />
+    <div ng-controller="appCalcController">
+    	<h2>Calculadora</h2>
+        <p>Numero1: <input  type="number" ng-model="Number1" /></p>
+        <p>Numero2: <input  type="number" ng-model="Number2" /></p>
+        <p>
+        	<button ng-click="addButton()">+</button>
+        	<button ng-click="subButton()">-</button>
+            <button ng-click="multButton()">*</button>
+            <button ng-click="divButton()">/</button>
+        </p>
+        <p>Resultado: <input  type="number" ng-model="Result" /></p>
+    </div>
+	<script type="text/javascript" src="angular.min.js"></script>
+
+	<script type="text/javascript">
+	angular.module("app", [])
+		.controller('appController', function($scope){
+		   /*$scope.a=5;
+		   $scope.b=0;
+		   $scope.result=parseInt($scope.a)+parseInt($scope.b);*/
+		})
+		.controller('appCalcController', function($scope){
+			$scope.addButton = function(){
+		   		alert("sumaa")
+		   	};
+			$scope.subButton = function(){
+		   			
+		   	};
+			$scope.multButton = function(){
+		   			
+		   	};
+			$scope.divButton = function(){
+		   			
+			};
+		});
+	</script>
+    
+</body>
+</html>

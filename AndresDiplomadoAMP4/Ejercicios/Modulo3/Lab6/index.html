@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>AngularJS First Application</title>
+	<meta charset="utf-8" />
+</head>
+<body>
+
+<!-- Directivas -->
+
+	<div>
+		<h1>Sample Application</h1>
+		<p>Enter your First Name: <input  type="text" ng-model="firts_name" /></p>
+        <p>Enter your Last Name: <input  type="text" ng-model="last_name" /></p>
+        <p>Enter your Phone: <input  type="text" ng-model="phone" /></p>
+		<p> 
+        	<ul>
+            	<li ng-bind="firts_name"></li>
+                <li ng-bind="last_name"></li>
+                <li ng-bind="phone"></li>
+            </ul>
+		</p>
+	</div>
+
+   
+<!-- Expresiones y filtros    -->
+
+    <div ng-app="FiltrosyExpresions">
+        <h1>Productos</h1>
+        <ul>
+            <li>Smartphone {{ 500000 | currency }}</li>
+            <li>Tablet {{ 200000 | currency: "$" }}</li>
+            <li>laptop {{ 3000000 * 0.16 + 20000 }} </li>
+            <li> Importado de {{ 'MaDe In ChiNA' | uppercase }} </li>
+        </ul>
+    </div>
+    
+	<script type="text/javascript" src="angular.min.js"></script>
+</body>
+</html> 

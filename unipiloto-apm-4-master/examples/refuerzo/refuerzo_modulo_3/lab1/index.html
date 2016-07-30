@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">		
+        
+        <script type="text/javascript" src="js/angular.min.js"></script>
+        <script type="text/javascript" src="js/lab1a.js"></script>
+        
+	</head>
+	<body ng-app="lab1a">  
+
+        <body ng-controller="lab1aController">
+          <b>Nombre Completo</b>: {{ Data.name | uppercase }} <br>
+          <b>Cedula</b>: {{ Data.id }} <br>
+          <b>Profesion</b>: {{ Data.profession }} <br>
+          <b>Salario</b>: {{ Data.salary }} <br>
+          <b>Telefono</b>: {{ Data.phone  }} <br>
+          <b>Direccion</b>: {{ Data.address }} <br><br>
+          
+          
+          <b>Cambiar Nombre</b>: <input name="name" type="text" ng-model="Data.name">
+          
+          
+        </body>        
+        
+	</body>
+</html>

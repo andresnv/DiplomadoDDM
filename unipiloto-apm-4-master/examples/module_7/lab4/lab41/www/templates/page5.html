@@ -1,0 +1,71 @@
+<ion-view title="Page 5" id="page5" class=" ">
+    <ion-content padding="true" class="has-header">
+        <form id="login-form1" class="list ">
+            <ion-list id="login-list1" class=" ">
+                <label class="item item-input " id="login-input1">
+                    <span class="input-label">Username</span>
+                    <input type="text" placeholder="" id="UserName">
+                </label>
+                <label class="item item-input " id="login-input2">
+                    <span class="input-label">Password</span>
+                    <input type="password" placeholder="" id="Password">
+                </label>
+            </ion-list>
+            <div class="spacer" style="height: 40px;"></div>
+            <button id="login-button1"  ng-click="goto()" class=" button button-stable  button-block ">Log in</button>
+            <!--<a href="#" onclick="window.open('/signup', '_system', 'location=yes'); return false;" id="login-button2" class=" button button-positive  button-block button-clear ">Or create an account</a>-->
+        </form>
+    </ion-content>
+</ion-view>
+
+
+
+<ion-view title="Camera Tab Default Page" id="page2" class=" ">
+    <ion-content padding="true" class="has-header">
+    	<header>
+    		<h1>{{yepp}}</h1>
+    	</header>
+    	<div class="list">
+			  <label class="item item-input">
+			    <input ng-model="email" type="email" placeholder="First Name">
+			  </label>
+			  <label class="item item-input">
+			    <input ng-model="pass" type="password" placeholder="">
+			  </label>
+			  <label class="item item-input">
+			    <textarea ng-model="description" placeholder="Comments"></textarea>
+	  		</label>
+		</div>
+		<button ng-click="goToPage(email, pass, description)" class="button button-stable">
+  Save
+</button>
+
+    </ion-content>
+</ion-view>
+
+
+
+angular.module('app.controllers', [])
+     
+.controller('cameraTabDefaultPageCtrl', function($scope, $state) {
+	$scope.yepp = 'HELLO';
+	$scope.goToPage = function(_email, _pass, _description){
+		localStorage.setItem('email', _email);
+		localStorage.setItem('pass', _pass);
+		localStorage.setItem('description', _description);
+		$state.go('tabsController.cartTabDefaultPage');
+	}
+})
+   
+.controller('cartTabDefaultPageCtrl', function($scope) {
+	console.log(localStorage.getItem('email'));
+	$scope.email = localStorage.getItem('email');
+	$scope.pass = localStorage.getItem('pass');
+	$scope.description = localStorage.getItem('description');
+
+})
+   
+.controller('cloudTabDefaultPageCtrl', function($scope) {
+
+})
+    
